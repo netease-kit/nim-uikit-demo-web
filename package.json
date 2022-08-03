@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env ENV=dev umi dev",
+    "build:test": "cross-env ENV=dev umi build",
+    "build": "cross-env ENV=prod umi build",
+    "pack:test": "sh ./bin/deploy.sh test",
+    "pack": "sh ./bin/deploy.sh master",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "openSource": "node ./build/openSource.js"
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.5.0",
+    "@xkit-yx/im-kit-ui": "^0.0.9",
+    "@xkit-yx/login-react-ui": "^0.2.1",
+    "ahooks": "^3.4.1",
+    "antd": "4.20.6",
+    "axios": "^0.27.2",
+    "mobx": "^6.6.0",
+    "mobx-react": "^7.5.0",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "react-string-replace": "^1.1.0",
+    "umi": "^3.5.23"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.5.23",
+    "chalk": "4.1.2",
+    "cross-env": "^7.0.3",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  },
+  "changelog": "cp package.json _package.json &&preset=`conventional-commits-detector` && echo $preset && bump=`conventional-recommended-bump -p angular` && echo ${1:-$bump} && npm --no-git-tag-version version ${1:-$bump} &>/dev/null && conventional-changelog -i CHANGELOG.md -s -p ${2:-$preset} && git add CHANGELOG.md package.json package-lock.json && version=`cat package.json` && git commit -m'docs(CHANGELOG): $version' && mv -f _package.json package.json && npm version ${1:-$bump} -m 'chore(release): %s' && git push --follow-tags "
+}
