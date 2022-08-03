@@ -1,0 +1,112 @@
+.desk-container {
+  width: 1070px;
+  height: 670px;
+  background: linear-gradient(180deg, #ffffff 5.25%, #ffffff 117.69%);
+
+  .top {
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .search {
+      width: 569px;
+    }
+
+    .add {
+      margin-left: 23px;
+    }
+  }
+
+  .conversation-list {
+    display: flex;
+    height: calc(670px - 51px);
+
+    .left-nav {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 66px;
+      height: 100%;
+      border-top: 1px solid #f0f1f2;
+      border-right: 1px solid #f0f1f2;
+
+      .avatar {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .chat {
+        height: 45px;
+        margin-top: 40px;
+        text-align: center;
+
+        .content {
+          height: 17px;
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+          color: #333333;
+        }
+      }
+
+      .address-book {
+        height: 45px;
+        text-align: center;
+        margin-top: 25px;
+
+        img {
+          margin: auto;
+          display: block;
+        }
+
+        .content {
+          height: 17px;
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+          margin-top: 4px;
+          color: #333333;
+        }
+      }
+
+      .quit {
+        position: absolute;
+        bottom: 24px;
+        height: 45px;
+        width: 100%;
+
+        &:hover {
+          cursor: pointer;
+
+          .quit-logo {
+            background: url(./../assets/Index/quit_hover.png);
+          }
+        }
+
+        .quit-logo {
+          width: 19px;
+          height: 19px;
+          margin: auto;
+          background: url(./../assets/Index/quit.png);
+        }
+
+        .content {
+          text-align: center;
+          margin-top: 4px;
+          height: 17px;
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+          color: #333333;
+        }
+      }
+    }
+  }
+}
