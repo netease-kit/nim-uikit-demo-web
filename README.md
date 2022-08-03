@@ -95,17 +95,3 @@ $ npm run build
 ├── tsconfig.json
 └── typings.d.ts
 ```
-
-### 启动项目
-
-```bash
-$ npm run start
-```
-
-### 构建项目
-
-```bash
-$ npm run build
-```
-
-## 目录说明
