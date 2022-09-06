@@ -5,12 +5,16 @@ import chatInactivatedSrc from '@/assets/Index/chat_inactivated.png';
 import addressBookActivatedSrc from '@/assets/Index/addressBook_activated.png';
 import addressBookInactivatedSrc from '@/assets/Index/addressBook_inactivated.png';
 import { logoutFn } from '@xkit-yx/login-react-ui';
-import MyUserInfo from '@/components/MyUserInfo';
 import { authStore } from '@/store';
 import config from '@/config';
 import { observer } from 'mobx-react';
 import { Modal, message } from 'antd';
-import { Provider, SearchContainer, AddContainer } from '@xkit-yx/im-kit-ui';
+import {
+  Provider,
+  SearchContainer,
+  AddContainer,
+  MyAvatarContainer,
+} from '@xkit-yx/im-kit-ui';
 import { useIntl } from 'umi';
 
 import '@xkit-yx/im-kit-ui/es/style';
@@ -31,19 +35,19 @@ const Index: React.FC<any> = observer(({ location, history, children }) => {
 
   const quit = () => {
     Modal.confirm({
-      title: t('loginout'),
+      title: t('logout'),
       content: t('confirmLogout'),
       okText: t('okText'),
       cancelText: t('cancelText'),
       onOk: () => {
         logoutFn()
           .then(() => {
-            message.success(t('loginoutSuccess'));
+            message.success(t('logoutSuccess'));
             history.replace('/login');
             authStore.reset();
           })
           .catch((err) => {
-            message.error(t('loginoutFalied'));
+            message.error(t('logoutFalied'));
             console.error('退出登录失败：', err);
           });
       },
@@ -95,7 +99,7 @@ const Index: React.FC<any> = observer(({ location, history, children }) => {
         <div className="conversation-list">
           <div className="left-nav">
             <div className="avatar">
-              <MyUserInfo />
+              <MyAvatarContainer />
             </div>
             <NavLink to="/main/chat" activeClassName="selected">
               <div className="chat">

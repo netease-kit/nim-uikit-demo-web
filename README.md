@@ -6,7 +6,7 @@
 ## 安装依赖
 
 ```bash
-$ npm install 
+$ yarn install 
 ```
 
 ## 快速启动
@@ -26,13 +26,13 @@ export default {
 启动：
 
 ```bash
-$ npm run start
+$ yarn run start
 ```
 
 ## 构建项目
 
 ```bash
-$ npm run build
+$ yarn run build
 ```
 
 ## 目录说明

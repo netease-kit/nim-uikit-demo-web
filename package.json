@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
-    "@xkit-yx/im-kit-ui": "^0.0.9",
-    "@xkit-yx/login-react-ui": "^0.2.1",
+    "@xkit-yx/im-kit-ui": "^0.1.0",
+    "@xkit-yx/login-react-ui": "^0.2.6",
     "ahooks": "^3.4.1",
     "antd": "4.20.6",
     "axios": "^0.27.2",

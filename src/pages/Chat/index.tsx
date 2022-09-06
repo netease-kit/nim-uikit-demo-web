@@ -1,5 +1,4 @@
-import { ChatContainer, ChatProvider } from '@xkit-yx/im-kit-ui';
-import { ConversationContainer } from '@xkit-yx/im-kit-ui';
+import { ChatContainer, ConversationContainer } from '@xkit-yx/im-kit-ui';
 
 import './index.less';
 
@@ -10,9 +9,7 @@ const Chat: React.FC = () => {
         <ConversationContainer />
       </div>
       <div className="chat-list">
-        <ChatProvider>
-          <ChatContainer />
-        </ChatProvider>
+        <ChatContainer />
       </div>
     </div>
   );
